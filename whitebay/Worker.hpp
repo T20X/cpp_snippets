@@ -20,8 +20,6 @@ public:
     void consume(int fd, int sz, int offset, char c)
     {
         char* arena = NULL;
-       // std::cout << "readSoFar=" << offset << " toReadNow=" << sz << "\n"; 
-
         arena = (char*)mmap(NULL, sz, PROT_READ, MAP_PRIVATE /*| MAP_POPULATE*/, fd, offset);
         if ((void*)-1 == arena)                
             utils::report(); 
@@ -49,8 +47,9 @@ private:
             if (arena[i] == '\n')
             {
                 back = i;
+                //std::cout << "\ncounter=" << counter << " front=" << front << " back=" << back;
                 r[counter].emplace_back(Interval{front,back});
-                front = back = ++i; // step over end of line!
+                front = back = i + 1; // step over end of line!
                 counter = 0;
             }
         }     

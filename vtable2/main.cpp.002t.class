@@ -1,0 +1,107 @@
+Vtable for A
+A::_ZTV1A: 7 entries
+0     (int (*)(...))0
+8     (int (*)(...))(& _ZTI1A)
+16    (int (*)(...))A::~A
+24    (int (*)(...))A::~A
+32    (int (*)(...))A::f1
+40    (int (*)(...))A::f2
+48    (int (*)(...))A::f12
+
+Class A
+   size=72 align=8
+   base size=72 base align=8
+A (0x0x7f902730b960) 0
+    vptr=((& A::_ZTV1A) + 16)
+
+Vtable for B
+B::_ZTV1B: 5 entries
+0     (int (*)(...))0
+8     (int (*)(...))(& _ZTI1B)
+16    (int (*)(...))B::f3
+24    (int (*)(...))B::f4
+32    (int (*)(...))B::f5
+
+Class B
+   size=8 align=8
+   base size=8 base align=8
+B (0x0x7f902730bae0) 0 nearly-empty
+    vptr=((& B::_ZTV1B) + 16)
+
+Vtable for C
+C::_ZTV1C: 14 entries
+0     (int (*)(...))0
+8     (int (*)(...))(& _ZTI1C)
+16    (int (*)(...))C::~C
+24    (int (*)(...))C::~C
+32    (int (*)(...))C::f1
+40    (int (*)(...))A::f2
+48    (int (*)(...))A::f12
+56    (int (*)(...))C::f3
+64    (int (*)(...))C::f6
+72    (int (*)(...))-72
+80    (int (*)(...))(& _ZTI1C)
+88    (int (*)(...))C::_ZThn72_N1C2f3Ev
+96    (int (*)(...))B::f4
+104   (int (*)(...))B::f5
+
+Class C
+   size=80 align=8
+   base size=80 base align=8
+C (0x0x7f90271c7310) 0
+    vptr=((& C::_ZTV1C) + 16)
+  A (0x0x7f902730bc60) 0
+      primary-for C (0x0x7f90271c7310)
+  B (0x0x7f902730bcc0) 72 nearly-empty
+      vptr=((& C::_ZTV1C) + 88)
+
+Vtable for K
+K::_ZTV1K: 4 entries
+0     (int (*)(...))0
+8     (int (*)(...))(& _ZTI1K)
+16    (int (*)(...))K::f20
+24    (int (*)(...))K::f21
+
+Class K
+   size=8 align=8
+   base size=8 base align=8
+K (0x0x7f902730bea0) 0 nearly-empty
+    vptr=((& K::_ZTV1K) + 16)
+
+Vtable for D
+D::_ZTV1D: 20 entries
+0     (int (*)(...))0
+8     (int (*)(...))(& _ZTI1D)
+16    (int (*)(...))D::~D
+24    (int (*)(...))D::~D
+32    (int (*)(...))C::f1
+40    (int (*)(...))A::f2
+48    (int (*)(...))A::f12
+56    (int (*)(...))C::f3
+64    (int (*)(...))C::f6
+72    (int (*)(...))D::f4
+80    (int (*)(...))D::f20
+88    (int (*)(...))-72
+96    (int (*)(...))(& _ZTI1D)
+104   (int (*)(...))C::_ZThn72_N1C2f3Ev
+112   (int (*)(...))D::_ZThn72_N1D2f4Ev
+120   (int (*)(...))B::f5
+128   (int (*)(...))-80
+136   (int (*)(...))(& _ZTI1D)
+144   (int (*)(...))D::_ZThn80_N1D3f20Ev
+152   (int (*)(...))K::f21
+
+Class D
+   size=88 align=8
+   base size=88 base align=8
+D (0x0x7f90271c7540) 0
+    vptr=((& D::_ZTV1D) + 16)
+  C (0x0x7f90271c75b0) 0
+      primary-for D (0x0x7f90271c7540)
+    A (0x0x7f902732d000) 0
+        primary-for C (0x0x7f90271c75b0)
+    B (0x0x7f902732d060) 72 nearly-empty
+        vptr=((& D::_ZTV1D) + 104)
+  K (0x0x7f902732d0c0) 80 nearly-empty
+      vptr=((& D::_ZTV1D) + 144)
+
