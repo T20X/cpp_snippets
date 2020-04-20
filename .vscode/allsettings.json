@@ -1,0 +1,26 @@
+{
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.autoClosingBrackets": false,
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.quickSuggestions": false,
+    "editor.quickSuggestionsDelay": 10,
+    "explorer.confirmDelete": false,    
+    "terminal.integrated.shell.windows": "C:\\cygwin64\\bin\\bash.exe",        
+    "terminal.integrated.env.windows": {
+        "CHERE_INVOKING": "1"
+     },        
+     "terminal.integrated.shellArgs.windows": [
+      "--login",
+      "-i"
+     ],
+     "editor.wordWrap": "on",
+    "breadcrumbs.enabled": true,
+    "C_Cpp.updateChannel": "Insiders",
+    "remote.SSH.remotePlatform": {
+        "192.168.56.7": "linux"
+    },
+    "editor.fontSize": 18,
+    "files.associations": {
+    
+    },
+}
