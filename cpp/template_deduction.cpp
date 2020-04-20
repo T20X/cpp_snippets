@@ -37,6 +37,15 @@ std::ostream& operator<<(std::ostream& out, const Container<T>& c) {
     return out;
 }
 
+struct Informer
+{
+};
+
+
+template <class = void> struct Temp { static Informer other; };
+template <> inline Informer Temp<>::other{};
+static auto& g_str2 = Temp<>::other;
+
 int main()
 {
     f(20);

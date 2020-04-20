@@ -20,7 +20,8 @@ struct A { A(int x) { throw exception(); } };
 struct B { A a_; B() try :a_(1) { } catch (const exception& e) { }  };
 int main()
 {
-
+    std::vector v;
+    v.
     DE b;
     try
     {
