@@ -14,6 +14,9 @@ int main(int argc, char* argv[])
 {
     if (argc < 3) return -1;
     
+
+
+    
     try
     {
         int fd = open("tmp/data", O_RDWR | O_CREAT | O_APPEND, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP);
