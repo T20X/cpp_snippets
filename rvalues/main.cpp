@@ -82,6 +82,7 @@ int main()
     }
 
 
+    getchar();
     //f(A().f1());
     //f(a1.f());
     return 0;

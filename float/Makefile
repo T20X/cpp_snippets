@@ -1,5 +1,4 @@
-INCLUDES = 
-LIBS = 
+INCLUDES = -I$(BOOST_INCLUDE) -I${PROJECTS}/common 
 DEBUG = -g
 
 CXX = g++

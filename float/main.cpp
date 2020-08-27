@@ -1,14 +1,25 @@
 #include <bits/stdc++.h>
 #include <fenv.h>
+#include <utils.h>
+#include <assert.h>
 
 
 using namespace std;
 int main()
 {
+    auto dec = 0.2/1.0;
+    std::cout << "\n default decimal type is = " << utils::typeName<decltype(dec)>() << "\n";
+    float dec2 = dec;
+    std::cout << "\n bits of dec = " << utils::printBits(dec) ;
+    std::cout << "\n bits of dec2 = " << utils::printBits(dec2) << "\n";
+    std::cout << "\n bits of 1 " << utils::printBits(1) << "\n";
+    assert(dec2 == dec);
+    
     //feenableexcept(FE_ALL_EXCEPT);
     //fedisableexcept(FE_DIVBYZERO);
     //feenableexcept(FE_DIVBYZERO);
     //
+    double one = 1.0;
    try {
    double f1=10.0d/0.0;
     if(std::fetestexcept(FE_DIVBYZERO)) {
@@ -22,7 +33,6 @@ int main()
    }
 
    try {
-    double one = 1.0;
     std::feclearexcept(FE_ALL_EXCEPT);
     double ret=one/10.0;
     std::cout << "1.0/10 = " << ret << '\n';

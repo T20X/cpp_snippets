@@ -63,6 +63,16 @@ namespace utils
         std::cout << endl;
     }
 
+    template <class T>
+    std::string printBits(T v)
+    {
+        std::string r;
+        int sz = sizeof(T) * 8;
+        for (int i = sz-1; i >=0; --i) 
+            r.push_back(((long)v & ((long)1U << i)) ? '1' : '0');
+        return r;
+    }
+
 }
 
 
