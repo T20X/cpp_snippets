@@ -61,7 +61,7 @@ namespace curried
     static void test()
     {
         int x0, x5=300,x4=2;
-        Curry<decay<decltype(product)>::type, int&, int, int, int> c(product, x0, 2, 2, 2);
-        cout << "\n " << c(x4, x5, 2) << " x0=" << x0 << " x5=" << x5;
+//        Curry<decay<decltype(product)>::type, int&, int, int, int> c(product, x0, 2, 2, 2);
+ //       cout << "\n " << c(x4, x5, 2) << " x0=" << x0 << " x5=" << x5;
     }
 }

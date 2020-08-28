@@ -10,7 +10,7 @@ bool g(double l, double r) {
 
 int main()
 {
-    const auto f1=1.10d;
+    const auto f1=1.10;
     auto f2=2/f1;
     cout << "\n f2=" << f2 << " same=" << is_same<double,decay<decltype(f1)>::type>::value;
     double zero = 0.0;

@@ -21,7 +21,7 @@ int main()
     //
     double one = 1.0;
    try {
-   double f1=10.0d/0.0;
+   double f1=10.0/0.0;
     if(std::fetestexcept(FE_DIVBYZERO)) {
         std::cout << "division by zero reported , f1=" << f1 << "\n";
     } else {

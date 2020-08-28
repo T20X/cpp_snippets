@@ -23,6 +23,6 @@ struct B : A
 
 int main()
 {
-    A a1("sadfsad");
+    //A a1("sadfsad");
     return 0;
 }

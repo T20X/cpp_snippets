@@ -20,9 +20,9 @@ struct A1
 {
     A1() { cout << "A1\n::A1()"; } 
     ~A1() { cout << "\nA1::~A1()"; } 
-    A1(const A1& other) = delete;
-    A1& operator=(const A1& other) = delete;
-    A1& operator=(A1&& other) = delete;
+    A1(const A1& other) = default;
+    A1& operator=(const A1& other) = default;
+    A1& operator=(A1&& other) = default;
     string s1;
 };
 

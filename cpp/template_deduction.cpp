@@ -50,9 +50,6 @@ int main()
 {
     f(20);
     std::vector<int> v{1,2,2};
-    std::cout << v;
-    decltype(auto) val = get(v, 1);    
-    std::cout << "\n get() " << val ; 
 
     std::vector<std::pair<std::string, std::string>> vs;
     //vs.emplace_back(std::make_pair(std::string(10, 'c'), std::string(10, 'c')));

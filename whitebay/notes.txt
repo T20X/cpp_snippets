@@ -1,2 +1,0 @@
-On NFS, O_EXCL is supported only when using NFSv3 or later on
-              kernel 2.6 or later
