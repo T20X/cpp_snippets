@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [  
         {
-            "name": "Launch",
+            "name": "debug-cpp",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}/cpp-floating",
+            "program": "${workspaceFolder}/build/cpp-floating",
             "args": [],
         }
     ]

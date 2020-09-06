@@ -7,6 +7,8 @@ message( ${MY_PROJECT_NAME} )
 # project name
 project(${MY_PROJECT_NAME})
 
+SET(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # creates the variable EXEC and sets it to hello
 set(EXEC ${MY_PROJECT_NAME})
 message( ${EXEC} )
