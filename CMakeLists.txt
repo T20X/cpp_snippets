@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.5.1)
 
 get_filename_component(MY_PROJECT_NAME ${CMAKE_CURRENT_SOURCE_DIR} NAME)
-message( ${MY_PROJECT_NAME} )
+message( ${MY_PROJECT_NAME} "-----------" ${PROJECT_SOURCE_DIR} )
 
 # project name
 project(${MY_PROJECT_NAME})
@@ -43,18 +43,30 @@ file(GLOB SOURCES *.cpp */*.cpp)
 
 # compiles the files defined by SOURCES to generante the executable defined by EXEC
 foreach( testsourcefile ${SOURCES} )
+
+    unset(exe_full_target)
+
     # I used a simple string replace, to cut off .cpp.
     string( REPLACE ".cpp" "" testname ${testsourcefile} )
     get_filename_component(exe_name ${testname} NAME)
     get_filename_component(exe_parent_dir ${testsourcefile} DIRECTORY)
     get_filename_component(exe_parent_dir_name ${exe_parent_dir} NAME)
     string(APPEND exe_full_target ${exe_parent_dir_name} "-" ${exe_name})
+
+    unset(CMAKE_FILE_PATH CACHE)
+    find_path (CMAKE_FILE_PATH NAMES CMakeLists.txt PATHS ${exe_parent_dir})
+    if (NOT (CMAKE_FILE_PATH STREQUAL  "CMAKE_FILE_PATH-NOTFOUND" OR exe_parent_dir STREQUAL ${PROJECT_SOURCE_DIR}) )
+      message(${exe_full_target} "->"  ${CMAKE_FILE_PATH} " got its own CMake -> " ${exe_parent_dir} )
+      add_subdirectory(${exe_parent_dir_name})
+      continue()
+    endif()
+
     if(NOT ${exe_full_target} MATCHES "disable.*" OR ${exe_name} MATCHES "disable.*")
       message("added target " ${exe_full_target})
       add_executable( ${exe_full_target} ${testsourcefile} )
-      target_link_libraries(${exe_full_target} PRIVATE Threads::Threads)
+      target_link_libraries(${exe_full_target} PRIVATE Threads::Threads) 
     endif()
-    unset(exe_full_target)
+
     # Make sure YourLib is linked to each app
     #target_link_libraries( ${testname} YourLib )
 endforeach( testsourcefile ${SOURCES} )

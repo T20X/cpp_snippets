@@ -54,6 +54,7 @@ int main()
     //Alloc<int> t2 = t;
     list<int> l1;
     list<int> l2;
+    
     //l1.push_back('1');
     if (l1 == l2) cout << "equal";
 

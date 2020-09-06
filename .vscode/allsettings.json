@@ -3,7 +3,7 @@
     "editor.autoClosingBrackets": false,
     "editor.suggestOnTriggerCharacters": false,
     "editor.quickSuggestions": false,
-    "editor.quickSuggestionsDelay": 10,
+    //editor.quickSuggestionsDelay": 10,
     "explorer.confirmDelete": false,    
     "terminal.integrated.shell.windows": "C:\\cygwin64\\bin\\bash.exe",        
     "terminal.integrated.env.windows": {
@@ -22,5 +22,5 @@
     "editor.fontSize": 22,
     "files.associations": {
     
-    },
+    }
 }
