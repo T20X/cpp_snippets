@@ -23,3 +23,6 @@ endif()
 
 add_executable(HelloWorld executor.cpp)
 target_link_libraries(HelloWorld ${Boost_LIBRARIES} ${FOLLY_LIBRARIES})
+
+add_executable(IoDemo io_demo.cpp)
+target_link_libraries(IoDemo ${Boost_LIBRARIES} ${FOLLY_LIBRARIES})
