@@ -21,6 +21,11 @@
 },
 {
   "directory": "/home/maine/cpp_snippets/build",
+  "command": "/bin/clang++-10   -I/home/maine/cpp_snippets/includes -I/home/maine/cpp_snippets/common  -g   -pthread -std=gnu++2a -o CMakeFiles/operators-constructor.dir/operators/constructor.cpp.o -c /home/maine/cpp_snippets/operators/constructor.cpp",
+  "file": "/home/maine/cpp_snippets/operators/constructor.cpp"
+},
+{
+  "directory": "/home/maine/cpp_snippets/build",
   "command": "/bin/clang++-10   -I/home/maine/cpp_snippets/includes -I/home/maine/cpp_snippets/common  -g   -pthread -std=gnu++2a -o CMakeFiles/list-main.dir/list/main.cpp.o -c /home/maine/cpp_snippets/list/main.cpp",
   "file": "/home/maine/cpp_snippets/list/main.cpp"
 },
