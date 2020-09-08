@@ -2,6 +2,7 @@
 #include <fenv.h>
 #include <utils.h>
 #include <assert.h>
+#include <vector>
 
 
 using namespace std;
