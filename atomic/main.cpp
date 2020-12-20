@@ -78,6 +78,7 @@ int main()
     //cout << "\n str=" << a2.s1;
 
 
+
     cout << "\n new....\n\n\n\n\n\n\n";
 //    A1 a11 = B1().f1(); 
     A&& a4 = B().a_;

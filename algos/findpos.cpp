@@ -36,4 +36,5 @@ int main()
     cout << "#" << ++i << " : " << findPos({1,3,5,7}, 10) << "\n";
     cout << "#" << ++i << " : " << findPos({1,3,5,7}, 2) << "\n";
     cout << "#" << ++i << " : " << findPos({1,3,5,7}, 6) << "\n";
+    vector<int> v;
 }

@@ -65,5 +65,10 @@ int main()
     static_assert(array_size(arr) == f(d1), "asdas");
     cout << "\narray size = " << array_size(arr) << "is_literal_type=" << is_literal_type<double>::value;
     int x1 = f(12.4);
+
+    bool f = true;
+    f &= (1==1);
+    f &= (1!=1);
+    std::cout << "\nF=" << f;
     return 0;
 }

@@ -8,7 +8,8 @@
             "name": "debug-cpp",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}/build/cpp-floating",
+            //"program": "${workspaceFolder}/build/cpp-floating",
+            "program": "${workspaceFolder}/build/${relativeFileDirname}-${fileBasenameNoExtension}",
             "args": [],
         }
     ]
