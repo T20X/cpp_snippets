@@ -15,6 +15,32 @@
             "group": "build"
         },
         {
+            "type": "shell",
+            "label": "BuildCppLegacy",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "-O0",
+                "-fno-strict-aliasing",
+                "-D_REENTRANT",
+                "-std=c++17",
+                "-pthread",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
             "label": "Launch Program",
             "type": "shell",
             "command": "./${relativeFileDirname}-${fileBasenameNoExtension}",
@@ -26,10 +52,7 @@
             "dependsOn": [
                 "BuildCpp"
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
+            "group": "build"
         }
     ]
 }

@@ -22,5 +22,8 @@ struct D : public Base<T>
 int main()
 {
     D<int> d1;
+    std::cout << std::numeric_limits<long>::max();
+    std::cout << "\n" << std::numeric_limits<long long>::max();
+    std::cout << "\n" << std::numeric_limits<int>::max();
     return 0;
 }
