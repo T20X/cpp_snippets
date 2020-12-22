@@ -6,6 +6,7 @@
 using namespace std;
 using namespace boost; 
 
+
 int main()
 {
     auto f = [](auto p) {

@@ -1,9 +1,9 @@
 {
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.autoClosingBrackets": false,
-    "editor.suggestOnTriggerCharacters": false,
+    "editor.suggestOnTriggerCharacters": true,
     "editor.quickSuggestions": true,
-    "editor.quickSuggestionsDelay": 10,
+    "editor.quickSuggestionsDelay":0 ,
     "C_Cpp.intelliSenseEngine": "Disabled",
     "explorer.confirmDelete": false,    
     "terminal.integrated.shell.windows": "C:\\cygwin64\\bin\\bash.exe",        
@@ -21,8 +21,11 @@
         "192.168.56.7": "linux"
     },
     "editor.fontSize": 16,
-    "clangd.path" : "/home/maine/workdir/vim/bundle/youcompleteme/third_party/ycmd/third_party/clangd/output/bin/clangd",
-    "clangd.arguments": ["-log=verbose", "-pretty", "--background-index", "--query-driver=/usr/bin/clang++", "--compile-commands-dir=/home/maine/cpp_snippets/build"],
+    "clangd.path" : "/home/maine/.vscode-server/data/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/11.0.0/clangd_11.0.0/bin/clangd",
+    "clangd.arguments": ["-log=verbose", "-pretty", "--background-index", "--compile-commands-dir=/home/maine/cpp_snippets/build"],
+    "clangd.onConfigChanged": "restart",
+    "clangd.semanticHighlighting": true,
+    //"clang.diagnostic.delay": 0,
     //"cmake.copyCompileCommands":"/home/maine/cpp_snippets/build/compile_commands.json",
     "terminal.integrated.shellArgs.linux": ["-l", "-i"],
     "files.associations": {

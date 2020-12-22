@@ -13,6 +13,7 @@ struct MyType
 	MyType(const optional<int>& other) { cout << "\n optional="; }
     ~MyType()
     {
+
         std::cout << "\n MyType::~MyType";
     }
     std::string s_;
@@ -48,7 +49,6 @@ struct T
 
 int main()
 {
-
     optional<MyType> o{MyType()};
     optional<MyType> o1{2};
     optional<MyType> o2(2);
