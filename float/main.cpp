@@ -5,9 +5,11 @@
 #include <vector>
 
 
-using namespace std;
 int main()
 {
+    std::vector<int> v1;
+    v1.clear();
+    using namespace std;
     auto dec = 0.2/1.0;
     std::cout << "\n default decimal type is = " << utils::typeName<decltype(dec)>() << "\n";
     float dec2 = dec;

@@ -4,6 +4,7 @@
     "editor.suggestOnTriggerCharacters": false,
     "editor.quickSuggestions": true,
     "editor.quickSuggestionsDelay": 10,
+    "C_Cpp.intelliSenseEngine": "Disabled",
     "explorer.confirmDelete": false,    
     "terminal.integrated.shell.windows": "C:\\cygwin64\\bin\\bash.exe",        
     "terminal.integrated.env.windows": {
@@ -21,6 +22,8 @@
     },
     "editor.fontSize": 16,
     "clangd.path" : "/home/maine/workdir/vim/bundle/youcompleteme/third_party/ycmd/third_party/clangd/output/bin/clangd",
+    "clangd.arguments": ["-log=verbose", "-pretty", "--background-index", "--query-driver=/usr/bin/clang++", "--compile-commands-dir=/home/maine/cpp_snippets/build"],
+    //"cmake.copyCompileCommands":"/home/maine/cpp_snippets/build/compile_commands.json",
     "terminal.integrated.shellArgs.linux": ["-l", "-i"],
     "files.associations": {
     

@@ -49,6 +49,8 @@ struct D : T
 
 
 
+
+
 void* operator new[]( std::size_t count, std::align_val_t al)
 {
     cout << "\n AUTO ALIGHHMENT GLOBAL operator new" << " size=" << count;
@@ -66,6 +68,10 @@ vector<class PO> vec;
 
 struct PO
 {
+    void f()
+    {
+        std::list<int> v;
+    }
 };
 
 struct Val

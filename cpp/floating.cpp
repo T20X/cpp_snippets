@@ -19,6 +19,8 @@ int main()
     if (zero < DBL_MIN/2) {
         cout << "\n greater 1";
     }
+
+
     if (g(DBL_MIN/2,zero)) {
          cout << "\n greater 2";
     }

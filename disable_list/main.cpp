@@ -1,8 +1,9 @@
 #include <bits/stdc++.h>
+#include "header_test.h"
 using namespace std;
 
 template <typename T>
-struct Alloc
+struct Alloc  
 {
   using value_type = T;
 
@@ -66,6 +67,7 @@ int main()
     cout << "\narray size = " << array_size(arr) << "is_literal_type=" << is_literal_type<double>::value;
     int x1 = f(12.4);
 
+ //   test();
     bool f = true;
     f &= (1==1);
     f &= (1!=1);

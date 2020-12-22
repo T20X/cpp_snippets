@@ -16,11 +16,11 @@ void f(BE& b)
     throw b;
 }
 
-struct A { A(int x) { throw exception(); } };
-struct B { A a_; B() try :a_(1) { } catch (const exception& e) { }  };
+struct A { A(int x) { throw std::runtime_error("asdfas"); } };
+struct B { A a_; B() try :a_(1) { } catch (const std::exception& e) { }  };
 int main()
 {
-    std::vector<int> v;
+
     DE b;
     try
     {

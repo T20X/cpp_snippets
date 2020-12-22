@@ -14,7 +14,8 @@ set(EXEC ${MY_PROJECT_NAME})
 message( ${EXEC} )
 
 # set the C++14 standard
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 set(CMAKE_CXX_LINK_FLAGS "${CMAKE_CXX_LINK_FLAGS} -latomic")
 
 set(Boost_USE_STATIC_LIBS OFF)
@@ -64,7 +65,7 @@ foreach( testsourcefile ${SOURCES} )
       continue()
     endif()
 
-    if(NOT ${exe_full_target} MATCHES "disable.*" OR ${exe_name} MATCHES "disable.*")
+    if(NOT ${exe_full_target} MATCHES "disable.*" AND NOT ${exe_name} MATCHES "disable.*")
       message("added target " ${exe_full_target})
       add_executable( ${exe_full_target} ${testsourcefile} )
       target_link_libraries(${exe_full_target} PRIVATE Threads::Threads) 
