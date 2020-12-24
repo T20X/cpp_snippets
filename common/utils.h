@@ -1,6 +1,7 @@
 #pragma once
 
 #include <boost/type_index.hpp>
+#include <cstdint>
 #include <iostream>
 
 namespace utils
@@ -68,9 +69,9 @@ namespace utils
     std::string printBits(T v)
     {
         std::string r;
-        int sz = sizeof(T) * 8;
-        for (int i = sz-1; i >=0; --i) 
-            r.push_back(((long)v & ((long)1U << i)) ? '1' : '0');
+        uint64_t sz = sizeof(T) * 8U;
+        for (uint64_t i = sz; i >0; --i) 
+            r.push_back(((uint64_t)v & ((uint64_t)1U << (i-1U))) ? '1' : '0');
         return r;
     }
 

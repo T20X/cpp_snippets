@@ -16,6 +16,20 @@
         },
         {
             "type": "shell",
+            "label": "MakeBuild",
+            "command": "make clean; make; ./app",
+            "args": [],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        },
+
+        {
+            "type": "shell",
             "label": "BuildCppLegacy",
             "command": "/usr/bin/g++",
             "args": [
@@ -35,10 +49,7 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
+            "group": "build"
         },
         {
             "label": "Launch Program",
@@ -52,7 +63,10 @@
             "dependsOn": [
                 "BuildCpp"
             ],
-            "group": "build"
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }

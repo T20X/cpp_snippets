@@ -13,7 +13,7 @@ all: app
 .cpp:
 	$(CXX) $(CXXFLAGS) $< -o $@ 
 
-SRC = main.cpp A.cpp B.cpp
+SRC = C.cpp main.cpp A.cpp B.cpp
 OBJ = $(addsuffix .o, $(basename $(SRC)))
 
 app: $(OBJ)

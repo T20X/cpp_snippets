@@ -11,11 +11,14 @@ int main()
     v1.clear();
     using namespace std;
     auto dec = 0.2/1.0;
+    std::cout <<  std::setprecision(20) ;
     std::cout << "\n default decimal type is = " << utils::typeName<decltype(dec)>() << "\n";
     float dec2 = dec;
     std::cout << "\n bits of dec = " << utils::printBits(dec) ;
     std::cout << "\n bits of dec2 = " << utils::printBits(dec2) << "\n";
     std::cout << "\n bits of 1 " << utils::printBits(1) << "\n";
+    std::cout << "\n Next after 1.1=" << std::nextafter(1.1, 1.5);
+    std::cout << "\n Next after 10000000000.1=" << 10000000000.1- std::nextafter(10000000000.1, 1.5);
     //assert(dec2 == dec);
     
     //feenableexcept(FE_ALL_EXCEPT);
