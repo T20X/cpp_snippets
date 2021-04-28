@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include <fenv.h>
+#include <list>
 #include <utils.h>
 #include <assert.h>
 #include <vector>
@@ -61,6 +62,11 @@ int main()
     } 
    }
 
+try {
+    throw std::runtime_error("asdf");
+} catch (const std::exception& e) {
+    //std::string("asdf") << e.what();
+}
    cout << "\n round mode=" << fegetround(); 
    cout << "\n def rounding 12.5 = " << std::nearbyint(12.5);
    std::fesetround(FE_TONEAREST);
